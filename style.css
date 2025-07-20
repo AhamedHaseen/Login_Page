@@ -23,6 +23,11 @@ body {
   text-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 }
 
+.login-title i {
+  margin-right: 10px;
+  color: #667eea;
+}
+
 .login-form {
   max-width: 420px;
   width: 100%;
@@ -43,10 +48,35 @@ body {
   font-size: 0.95em;
 }
 
+.login-label i {
+  margin-right: 8px;
+  color: #667eea;
+  width: 16px;
+}
+
+.input-group {
+  margin-bottom: 20px;
+}
+
+.input-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.input-icon {
+  position: absolute;
+  left: 16px;
+  color: #999;
+  font-size: 16px;
+  z-index: 1;
+  transition: color 0.3s ease;
+}
+
 .login-input {
   width: 100%;
-  padding: 14px 16px;
-  margin-bottom: 20px;
+  padding: 14px 16px 14px 48px;
+  margin-bottom: 0;
   border: 2px solid #e1e5e9;
   border-radius: 8px;
   font-size: 16px;
@@ -60,6 +90,11 @@ body {
   background-color: #fff;
   box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
   transform: translateY(-2px);
+}
+
+.login-input:focus + .input-icon,
+.input-container:focus-within .input-icon {
+  color: #667eea;
 }
 
 .login-button {
@@ -76,6 +111,10 @@ body {
   text-transform: uppercase;
   letter-spacing: 1px;
   margin-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
 }
 
 .login-button:hover {
@@ -102,8 +141,13 @@ body {
   }
 
   .login-input {
-    padding: 12px 14px;
+    padding: 12px 14px 12px 44px;
     font-size: 16px; /* Prevents zoom on iOS */
+  }
+
+  .input-icon {
+    left: 14px;
+    font-size: 14px;
   }
 }
 
